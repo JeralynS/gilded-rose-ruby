@@ -11,7 +11,7 @@ module GildedRose
     when "Aged Brie"
       Brie
     when "Sulfuras, Hand of Ragnaros"
-      Sulfuras
+      Item
     when "Backstage passes to a TAFKAL80ETC concert"
       Backstage
     end
@@ -25,6 +25,10 @@ end
       @days_remaining = days_remaining
       @quality = quality
     end
+
+    def tick
+    end
+
   end
 
 
@@ -45,11 +49,6 @@ end
 
       @quality -= 1
       @quality -= 1 if @days_remaining <= 0
-    end
-  end
-
-  class Sulfuras < Item
-    def tick
     end
   end
 
